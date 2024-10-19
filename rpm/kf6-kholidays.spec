@@ -21,6 +21,8 @@ BuildRequires: qt6-qtbase-devel
 BuildRequires: qt6-qttools-devel
 BuildRequires: qt6-qtdeclarative-devel
 
+Requires(post): /sbin/ldconfig
+Requires(postun): /sbin/ldconfig
 
 %description
 %{summary}.
@@ -49,6 +51,9 @@ Developer Documentation files for %{name} for use with KDevelop or QtCreator.
 %cmake_install
 
 %find_lang_kf6 libkholidays6_qt
+
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files -f libkholidays6_qt.lang
 %doc README.md
