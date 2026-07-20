@@ -12,6 +12,7 @@ BuildRequires:  cmake
 BuildRequires:  kf6-extra-cmake-modules >= %{majmin_ver_kf6}
 BuildRequires:  kf6-rpm-macros
 BuildRequires:  make
+BuildRequires:  flex
 
 BuildRequires: kf6-kconfig-devel >= %{majmin_ver_kf6}
 
